@@ -1,0 +1,17 @@
+  <div style="margin-top:10px;">
+  	
+  	 <ol>
+    	<li ng-repeat="item in list.items">
+    		{{item.description}}
+    		<button type="button" class ="btn btn-default" ng-click="list.onRemove({index: $index})">
+    			Don't want this one!
+    			
+    			</button>
+    	</li>
+    	
+    </ol>
+   <div class="error" ng-transclude></div>
+  	
+  	
+  </div>
+   
