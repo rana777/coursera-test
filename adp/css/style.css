@@ -1,0 +1,171 @@
+header{
+	padding-top:10px;
+  	padding-bottom:10px;
+	}
+
+
+nav {
+  position: absolute;
+  left: 0px;
+  width: 100px;
+  background:#124f60;
+  height:668px;
+}
+
+nav ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	
+}
+
+li{
+	border-bottom: 1px solid #2b8399;
+	height:75px;
+	 padding: 16px 16px;
+}
+li a {
+    color: #ffffff;
+    
+   
+    text-decoration: none;
+    text-align:center;
+    
+    
+}
+a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.leftnavtext{
+	margin-top:6px;
+}
+ .container {
+  	position: relative;
+  	padding-left:0px;
+  	padding-right:0px;
+  	
+  	height:500px;
+  	width:940px;
+  	
+	}
+	section {
+  /* position is static by default */
+  margin-left: 100px;
+  padding-left:20px;
+  padding-right:20px;
+}
+	#secHeader{
+		height:75px;
+		background:#ffffff;
+		padding-bottom:14px;
+		padding-top:5px;
+		border-bottom: 3px solid #c9c9c9;
+		
+	}
+	#secDataWrapper{
+  	
+  	background:#ebebeb;
+  	padding-top:20px;
+  }
+  #uploadFileBox{
+  	background:#ffffff;
+  	border:2px solid #dddddd;
+  	width:402px;
+  	height:173px;
+  	box-shadow:#dddddd 2px;
+  	padding:10px;
+  	
+  }
+	.adpuploadbutton{
+		  width: 166px;
+    height: 25px;
+    background: #227f98;
+    font-family: Helvetica;
+    font-size: 11px;
+    /* font-weight: bold; */
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 30px;
+    display: block;
+    /* text-align: center; */
+    margin: 0 auto;
+    border: 0px;
+    padding: 6px;
+	}
+	#maxFileSizeBox{
+		    color: #6d6d6d;
+    margin-top: 5px;
+    margin-bottom: 16px;
+	}
+	
+	#uploadIconBox{
+		border:2px solid #e5e5e5;
+		border-style:dashed;
+		
+	}
+	
+	  	#filesStatus{
+  		width:400px;
+  		height:168px;
+  		border:1px solid #f5f5f5;
+  		background:#ffffff;
+  		margin-top:12px;
+  		padding-left:16px;
+  		padding-right:16px;
+  		margin-bottom:10px;
+  		
+  	}
+	
+	#wrapFileStatus{
+	background: #f6f6f6;
+    width: 399px;
+    height: 105px;
+    margin-left: -16px;
+    padding-left: 12px;
+    padding-right: 16px;
+    padding-top: 10px;
+    border-bottom: 2px solid #d6cbcb;
+	}
+	
+	#delivered{
+		    width: 110px;
+    /* height: 49px; */
+    border: 2px solid #4cd747;
+    display: inline-block;
+    padding-top: 6px;
+    padding-bottom: 9px;
+	}
+	#inprogress{
+		width: 110px;
+    padding-top: 6px;
+    padding-bottom: 9px;
+    border: 2px solid #6dc5df;
+    display: inline-block;
+	}
+	#unsuccessful{
+		width: 110px;
+    padding-top: 6px;
+    padding-bottom: 9px;
+    border: 2px solid #e3165c;
+    display: inline-block;
+	}
+	.downloadbtnadp{
+	width: 121px;
+    height: 37px;
+    background: #ffffff;
+    font-family: Helvetica;
+    font-size: 10px;
+    color: #494647;
+    padding: 8px;
+    border-radius: 25px;
+    display: block;
+    /* text-align: center; */
+    border-style: solid;
+    border-color: #888888;
+    
+}
+
+
+

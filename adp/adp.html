@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  body{
+  	font-size:12px;
+  	font-family:Montserrat, sans-serif;
+  	background:#060005;
+  }
+  * {
+  	box-sizing: border-box;
+  	
+  }
+
+ h4.headerStyle{
+ 	font-size: 16px;
+    display: inline-block;
+    font-family: Arial;
+ 	
+ }
+ #fileAvailDownload{
+ 	    background: #fff;
+    width: 377px;
+    height: 125px;
+    padding: 14px;
+    border-bottom: 1px solid #e5e5e5;
+ }
+
+   
+  	
+  </style>
+  <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	</head>
+<body>
+<div class="container">
+	<header>
+		
+		<img src="images/logo.png">
+		<img src ="images/poweredby.png" style="float:right;">
+	</header>
+	<div id="navbar">
+		<nav  class="w3-sidenav">
+			<ul class="text-center;">
+				<li >
+				<a href="#" style="cursor:pointer;">
+					<img src="./images/dashboard.png" style="width:26px;display:block;margin:0 auto;">
+					<p class="leftnavtext">DASHBOARD</p>
+					
+				</a>
+				
+			</li>
+			<li>
+				<a href="#">
+				<i class="fa fa-question-circle" style="font-size:25px;color:#ffffff;display:block;"></i>
+				<p class="leftnavtext"> HELP</p>
+			</a>	
+			</li>
+				
+			</ul>
+			
+		</nav>
+		
+	</div>
+	 
+	 	 <section id="secHeader">
+	 	 	<div class="row">
+	 	 		<div class="col-md-6">
+	 	 			<h4 style="color:#4a4a4a;">Welcome back, Sally</h4>
+					<p style="color:#838182;">You last signed on June 27, 2016 (1:37 PM) ET</p>
+	 	 		</div>
+	 	 		<div  class="col-md-6" style="text-align:right;margin-top:10px;">
+	 	 			<div  style="display:inline-block;">
+	 	 				<img src="./images/userCircle.png" style="height:30px;" class="img-circle">
+	 	 			</div>
+	 	 			<div style="display:inline-block;border-right:2px solid #d6d6d6;padding: 5px 10px 5px;">
+	 	 				<a style="color:#266f7f;text-decoration: none;" href="#">SALLY D </a>
+	 	 			</div>
+	 	 			
+	 	 			<div style="display:inline-block;padding: 5px 10px 5px;">
+	 	 				<a href="#" style="color:#266f7f;text-decoration: none;">SIGN OUT</a>
+	 	 			</div>
+	 	 		</div>
+	 	 	</div>
+	 		
+</section><!--end of secHeader//-->
+	 <section id="secDataWrapper">
+	 	
+	 	<div class="row">
+	 		<div class="col-md-6">
+	 			<div id ="uploadFileBox">
+	 					<div id="uploadIconBox">
+	 						<div class="row" style="padding-top:15px;">
+	 							<div class="col-md-12 text-center" >
+	 								<i class="fa fa-cloud-upload fa-1x" style="font-size:35px;color:#c9c9c9;"></i>
+	 							</div>
+	 						</div>
+	 						<div class="row">
+	 							<div class="col-md-12 text-center">
+	 								<h4 style="color:#b0b0b0;margin-top:0px;">Drag Files here or</h4>
+	 							</div>
+	 						</div>
+	 						<div class="row">
+	 							<div class="col-md-12 text-center">
+	 								<button class="adpuploadbutton">SELECT FILES TO UPLOAD</button>
+	 							</div>
+	 						</div>
+	 						
+	 						
+	 						<div class="row" id="maxFileSizeBox">
+	 							<div class="col-md-12 text-center">
+	 								Maximum file size: 2GB
+	 							</div>
+	 						</div>
+	 						
+	 					</div>
+	 			</div>
+	 			
+	 			
+	 			<div id="filesStatus" >
+	 				
+	 				<div class="row">
+	 					<div class="col-md-12">
+	 						<h4 style="font-size:16px;display:inline-block;font-family:Arial;">
+	 							Uploaded files for transfer
+	 							</h4>
+	 						<i class="glyphicon glyphicon-info-sign" style="font-size: 14px;color: #bbbbbb;">
+	 							
+	 						</i>
+	 					</div>
+	 				</div>
+	 				<div class="row">
+	 					<div class="col-md-12">
+	 						<span class="fa fa-calendar" style="font-size:14px;"></span>
+	 						<p style="display:inline-block;font-size:10px;">
+	 							Updates since last sign on
+	 							<span class="caret"></span>
+	 							<div style="display:inline-block;float:right;font-size:15px;">
+	 								<span class="glyphicon glyphicon-search" style="float:right;color:#bdbdbd;">
+									</span>
+	 							</div>
+	 							
+		
+	 						</p>
+	 						
+	 					</div>
+	 				</div>
+	 				
+	 				
+	 				<div id="wrapFileStatus" >
+	 						<div class="row"  >
+			 					<div class="col-md-12">
+			 						<span style="font-weight: 200;font-size: 18px;font-family: Arial;">
+			 							19
+			 							</span> 
+			 							<span style="font-size:10px;">
+			 								Total Files
+			 								</span>
+			 					</div>
+	 						</div>
+	 				
+		 				<div class="row">
+		 					<div class="col-md-4">
+		 						<div id="unsuccessful" class="text-center">
+    						<span class="glyphicon glyphicon-exclamation-sign" style="color:#e3165c;font-size:16px;">
+    						</span>
+    						 <span style="font-size:16px;font-family:arial;">
+    						 	3
+    						 </span>
+    							<div style="font-size:10px;"> Unsuccessful</div>
+							
+						</div>
+		 						
+		 						</div>
+		 					<div class="col-md-4">
+		 						<div id="inprogress"  class="text-center">
+    								<span class="glyphicon glyphicon-file" style="color:#6dc5df;font-size:16px;"></span>
+    								<span style="font-size:16px;font-family:arial;"> 5 </span>
+    									
+    									<div style="font-size:10px;">In Process</div>
+							
+								</div>
+		 						
+		 						
+		 						</div>
+		 					<div class="col-md-4">
+		 						<div id="delivered" class="text-center">
+    						<span class="glyphicon glyphicon-ok-sign" style="color:#4cd747;font-size:16px;">
+    						</span>
+    							<span style="font-size:16px;font-family:arial;"> 11</span>
+    							<div style="font-size:10px;"> Delivered</div>
+							
+						</div>
+		 						
+		 						
+		 						</div>
+		 					
+		 				</div>
+		 					
+	 				</div>
+	 				
+	 				
+	 			
+	 				
+	 				
+	 			</div><!--end of filesStatus//-->
+	 			<div>
+	 				<div class="row" style="    background: #fff;
+    margin-top: 2px;
+    margin-left: 0px;">
+	 					<div class="col-md-12">
+	 								<table class = "table table-hover">
+   
+												   <thead>
+												      <tr>
+												      	<th></th>
+												         <th>Files</th>
+												         <th>Date Uploaded</th>
+												         
+												         
+												      </tr>
+												   </thead>
+   
+								   <tbody>
+								      <tr>
+								      	<td><span class="glyphicon glyphicon-exclamation-sign" style="color:#e3165c;font-size:16px;">
+    						</span></td>
+								         <td>Affordability QT2 PT2 Reporting.csv</td>
+								         <td>06/29/2016, 3:09 PM</td>
+								         
+								      </tr>
+								      
+								      <tr>
+								      	<td><span class="glyphicon glyphicon-file" style="color:#6dc5df;font-size:16px;"></</td>
+								         <td>Eligibility Q2 PTE Reporting.csv</td>
+								         <td>06/29/2016, 3:09 PM</td>
+								         
+								      </tr>
+								      
+								      <tr>
+								      	<td><span class="glyphicon glyphicon-ok-sign" style="color:#4cd747;font-size:16px;">
+    										</span>
+    										</td>
+								         <td>New Hires FTW Q2 Checklist.csv</td>
+								         <td>06/29/2016, 3:09 PM</td>
+								         
+								      </tr>
+								   </tbody>
+   
+								</table>
+	
+	 					</div>
+	 					
+	 				</div>
+	 				this is where data grid will reside
+	 			</div><!--table files data//-->
+	 			
+	 			</div>
+	 		<div class="col-md-6">
+	 			<div id="fileAvailDownload" >
+	 				<div class="row">
+	 					<div class="col-md-12">
+	 						<h4 class="headerStyle">Files Available for Download</h4>
+	 						<i class="glyphicon glyphicon-info-sign" style="font-size: 14px;color: #bbbbbb;">	
+	 						</i>
+	 						
+	 				</div>
+	 			</div>
+	 			
+	 				<div class="row"  >
+			 					<div class="col-md-12">
+			 						<span style="font-weight: 200;font-size: 18px;font-family: Arial;">
+			 							19
+			 							</span> 
+			 							<span style="font-size:10px;">
+			 								Total Files
+			 								</span>
+			 					</div>
+	 			</div>
+	 			
+	 				<div class="row">
+	 					<div class="col-md-12">
+	 						<button class="downloadbtnadp">DOWNLOAD ALL (18)</button>
+	 					</div>
+	 					
+	 				</div>
+	 				
+	 				<div class="row" style="margin-left:0px;margin-top: 12px;background: #ffffff;margin-left:-14px;margin-right:-14px;">
+	 					<div class="col-md-12">
+	 						<table class = "table table-hover">
+   
+   <thead>
+      <tr>
+      	<th>
+      		<input type="checkbox" value="">
+      	</th>
+         <th>Files</th>
+         <th>Date Uploaded</th>
+         
+      </tr>
+   </thead>
+   
+   <tbody>
+      <tr>
+      	<td>
+      		<input type="checkbox" value="">
+      	</td>
+         <td>Affordability QT2 PT2 Reporting.csv</td>
+         <td>06/29/2016, 3:09 PM</td>
+         
+      </tr>
+      
+      <tr>
+      	<td>
+      		<input type="checkbox" value="">
+      	</td>
+         <td>Eligibility Q2 PTE Reporting.csv</td>
+         <td>06/29/2016, 3:09 PM</td>
+         
+      </tr>
+      
+      <tr>
+      	<td>
+      		<input type="checkbox" value="">
+      	</td>
+         <td>New Hires FTW Q2 Checklist.csv</td>
+         <td>06/29/2016, 3:09 PM</td>
+         
+      </tr>
+      
+      <tr>
+      	<td>
+      		<input type="checkbox" value="">
+      	</td>
+         <td>Eligibility Q2 PTE Reporting.csv</td>
+         <td>06/29/2016, 3:09 PM</td>
+         
+      </tr>
+      
+      <tr>
+      	<td>
+      		<input type="checkbox" value="">
+      	</td>
+         <td>New Hires FTW Q2 Checklist.csv</td>
+         <td>06/29/2016, 3:09 PM</td>
+         
+      </tr>
+      
+      <tr>
+      	<td>
+      		<input type="checkbox" value="">
+      	</td>
+         <td>Eligibility Q2 PTE Reporting.csv</td>
+         <td>06/29/2016, 3:09 PM</td>
+         
+      </tr>
+      
+      <tr>
+      	<td>
+      		<input type="checkbox" value="">
+      	</td>
+         <td>New Hires FTW Q2 Checklist.csv</td>
+         <td>06/29/2016, 3:09 PM</td>
+         
+      </tr>
+   </tbody>
+   
+</table>
+	
+	 					</div>
+	 				</div>
+	 			
+	 			</div><!--end of fileAvailDownload//-->
+	 		
+	 			
+	 			
+	 			
+	 		</div>
+	 	</div>
+	 </section>
+	
+	 	
+	 	
+	
+	          
+</div>
+	
+	
+</body>	
+	
+</html>
