@@ -1,0 +1,349 @@
+ <section id="secDataWrapper">
+	 	
+	 	<div class="row">
+	 		<div class="col-sm-6">
+	 			<!--upload file structure//-->
+	 			<div id ="uploadFileBox">
+	 					<div id="uploadIconBox">
+	 						<div class="row" style="padding-top:15px;">
+	 							<div class="col-md-12 text-center" >
+	 								<i class="fa fa-cloud-upload fa-1x" style="font-size:35px;color:#c9c9c9;"></i>
+	 							</div>
+	 						</div>
+	 						<div class="row">
+	 							<div class="col-md-12 text-center">
+	 								<h4 style="color:#b0b0b0;margin-top:0px;">Drag Files here or</h4>
+	 							</div>
+	 						</div>
+	 						<div class="row">
+	 							<div class="col-md-12 text-center">
+	 								<!-- <form name="formFileUpload" id="formFileUpload" method="post" action="rana.php"> -->
+	 									<button class="adpuploadbutton" ng-click="fileUpload()">SELECT FILES TO UPLOAD</button>
+	 									<input ng-hide="true" type="file" name="fileToUpload" id="fileToUpload">
+	 									
+	 								<!-- </form> -->
+	 								
+	 								
+	 							</div>
+	 						</div>
+	 						
+	 						
+	 						<div class="row" id="maxFileSizeBox">
+	 							<div class="col-md-12 text-center">
+	 								Maximum file size: 2GB
+	 							</div>
+	 						</div>
+	 						
+	 					</div>
+	 			</div>
+	 			
+	 			
+	 			<div id="filesStatus" >
+	 				
+	 				<div class="row">
+	 					<div class="col-md-12">
+	 						<h4 style="font-size:16px;display:inline-block;font-family:Arial;">
+	 							Uploaded files for transfer
+	 							</h4>
+	 						<i class="glyphicon glyphicon-info-sign" style="font-size: 14px;color: #bbbbbb;">
+	 							
+	 						</i>
+	 					</div>
+	 				</div>
+	 				<div class="row">
+	 					<div class="col-md-12">
+	 						<span class="fa fa-calendar" style="font-size:14px;"></span>
+	 						<p style="display:inline-block;font-size:10px;">
+	 							Updates since last sign on
+	 							<span class="caret"></span>
+	 							<div style="display:inline-block;float:right;font-size:15px;">
+	 								<span class="glyphicon glyphicon-search" style="float:right;color:#bdbdbd;">
+									</span>
+	 							</div>
+	 							
+		
+	 						</p>
+	 						
+	 					</div>
+	 				</div>
+	 				
+	 				
+	 				<div class="row" id="filestatuswrapperbox">
+	 					<div class="col-sm-12">
+	 						<div class="row"  >
+			 					<div class="col-md-12">
+			 						<span style="font-weight: 200;font-size: 18px;font-family: Arial;">
+			 							19
+			 							</span> 
+			 							<span style="font-size:10px;">
+			 								Total Files
+			 								</span>
+			 					</div>
+	 						</div>
+	 				
+		 				<div class="row" id="threeboxrow" >
+		 					<div class="col-sm-4">
+		 						<div id="unsuccessful" class="text-center">
+		    						<span class="glyphicon glyphicon-exclamation-sign" style="color:#e3165c;font-size:16px;">
+		    						</span>
+		    						 <span style="font-size:16px;font-family:arial;">
+		    						 	3
+		    						 </span>
+    									<div style="font-size:10px;"> Unsuccessful</div>
+							
+								</div>
+		 					</div><!--end of first color//-->
+	 						<div class="col-sm-4">
+		 						<div id="inprogress"  class="text-center">
+    								<span class="glyphicon glyphicon-file" style="color:#6dc5df;font-size:16px;">
+    									
+    								</span>
+    								<span style="font-size:16px;font-family:arial;"> 5 </span>
+    									
+    									<div style="font-size:10px;">In Process</div>
+							
+								</div>
+		 					</div>
+		 					<div class="col-sm-4">
+		 						<div id="delivered" class="text-center">
+    							<span class="glyphicon glyphicon-ok-sign" style="color:#4cd747;font-size:16px;">
+    							</span>
+    							<span style="font-size:16px;font-family:arial;"> 11</span>
+    							<div style="font-size:10px;"> Delivered</div>
+							
+							</div>
+		 						
+		 						
+		 						</div>
+		 					
+		 				</div>
+		 					
+	 				</div>
+	 				
+	 				
+	 			
+	 				
+	 				
+	 			</div><!--end of filesStatus//-->
+	 			<div>
+	 				<div class="row" >
+	 					<div class="col-md-12">
+	 								<table class = "table table-hover" >
+   
+												   <thead>
+												      <tr>
+												      	<th></th>
+												         <th>Files</th>
+												         <th>Date Uploaded</th>
+												         
+												         
+												      </tr>
+												   </thead>
+   
+								   <tbody>
+								      <!-- <tr>
+								      	<td>
+								      		<span uib-popover-template="dynamicPopover.templateUrl"  popover-trigger="'mouseenter'" class="glyphicon glyphicon-exclamation-sign" style="color:#e3165c;font-size:16px;">
+    										</span>
+    										</td>
+								         <td  >
+								         	
+								         	<div >
+								         		Affordability QT2 PT2 Reporting.csv
+								         	</div>
+								         	
+								         	
+								         	
+								         	</td>
+								         <td>06/29/2016, 3:09 PM</td>
+								         
+								      </tr> -->
+								      
+								      <tr ng-repeat="fileUploaded in filesUploaded">
+								      	<td ng-switch="fileUploaded.status">
+								      		<span ng-switch-when="P" uib-popover-template="dynamicPopover.templateUrl"  popover-trigger="'mouseenter'" class="glyphicon glyphicon-file" style="color:#6dc5df;font-size:16px;">
+								      		</span>
+								      		<span ng-switch-when="D" uib-popover-template="dynamicPopover.templateUrl"  popover-trigger="'mouseenter'" class="glyphicon glyphicon-exclamation-sign" style="color:#e3165c;font-size:16px;">
+    										</span>
+    										<span ng-switch-when="U" uib-popover-template="dynamicPopover.templateUrl"  popover-trigger="'mouseenter'" class="glyphicon glyphicon-ok-sign" style="color:#4cd747;font-size:16px;">
+    										</span>
+								      		
+								      	</td>
+								         <td>{{fileUploaded.fileName}}</td>
+								         <td>{{fileUploaded.dateUploaded}}
+								         	<script type="text/ng-template" id="myPopoverTemplate.html">
+
+													<div style="height:63px;font-size:12px;">
+													<div ng-switch="fileUploaded.status">
+														<span ng-switch-when="P">In process</span> 
+														<span ng-switch-when="D">Delivered</span>
+														<span ng-switch-when="U">Unsuccessful</span>
+														
+														of file transer to:</div>
+													<div>"sharedTo/To_ADP/MailBox"</div>
+																	    	<div>06/27/2016, 3:30 PM</div>
+																	    </div>
+																	    </script>
+								         	
+								         	</td>
+								         
+								      </tr>
+								      
+								      <!-- <tr ng-repeat="fileAvlDownload in filesAvlDownload">
+								      	<td><span class="glyphicon glyphicon-ok-sign" style="color:#4cd747;font-size:16px;">
+    										</span>
+    										</td>
+								         <td>
+								         		{{fileAvlDownload.fileName}}
+										</td>
+								         <td>
+								         	{{fileAvlDownload.dateUploaded}}
+								         </td>
+								         
+								      </tr> -->
+								   </tbody>
+   
+								</table>
+	
+	 					</div>
+	 					
+	 				</div>
+	 				
+	 			</div><!--table files data//-->
+	 			
+	 			</div>
+	 		
+	 		</div>
+	 		
+	 		
+	 		<div class="col-sm-6">
+	 			<div id="fileAvailDownload" style="border: 2px solid #dddddd;" >
+	 				<div class="row">
+	 					<div class="col-md-12">
+	 						<h4 class="headerStyle">Files Available for Download</h4>
+	 						<i class="glyphicon glyphicon-info-sign" style="font-size: 14px;color: #bbbbbb;">	
+	 						</i>
+	 						
+	 				</div>
+	 			</div>
+	 			
+	 				<div class="row"  >
+			 					<div class="col-md-12">
+			 						<span style="font-weight: 200;font-size: 18px;font-family: Arial;">
+			 							19
+			 							</span> 
+			 							<span style="font-size:10px;">
+			 								Total Files
+			 								</span>
+			 					</div>
+	 				</div>
+	 			
+	 				<div class="row"  style="border-bottom: 1px solid #dddddd;padding-bottom: 10px;">
+	 					<div class="col-md-12">
+	 						<button class="downloadbtnadp" ng-click="downloadAllFiles()">DOWNLOAD ALL (18)</button>
+	 					</div>
+	 					
+	 				</div>
+	 				
+	 				<div class="row" style="margin-left:0px;background: #ffffff;margin-left:-14px;margin-right:-14px;">
+	 					<div class="col-md-12">
+	 						
+	 						<table class = "table table-hover">
+   
+   <thead>
+      <tr>
+      	<th>
+      		<input type="checkbox"   ng-model="isAllSelected" ng-click="toggleAll()" style="margin-left:7px;">
+      	</th>
+         <th>Files</th>
+         <th>
+         		<a class="sortingascdesc" href="#" ng-click="sortType = 'dateUploaded'; sortReverse = !sortReverse">
+        Date Delivered
+        <span ng-show="sortType == 'dateUploaded' && !sortReverse" class="fa fa-caret-down"></span>
+        <span ng-show="sortType == 'dateUploaded' && sortReverse" class="fa fa-caret-up"></span>
+      </a>
+         	</th>
+         
+      </tr>
+   </thead>
+   
+   <tbody>
+      <!-- <tr>
+      	<td>
+      		<input type="checkbox" value="">
+      	</td>
+         <td>Affordability QT2 PT2 Reporting.csv</td>
+         <td>06/29/2016, 3:09 PM</td>
+         
+      </tr>
+      
+      <tr>
+      	<td>
+      		<input type="checkbox" value="">
+      	</td>
+         <td>Eligibility Q2 PTE Reporting.csv</td>
+         <td>06/29/2016, 3:09 PM</td>
+         
+      </tr>
+      
+      <tr>
+      	<td>
+      		<input type="checkbox" value="">
+      	</td>
+         <td>New Hires FTW Q2 Checklist.csv</td>
+         <td>06/29/2016, 3:09 PM</td>
+         
+      </tr>
+      
+      <tr>
+      	<td>
+      		<input type="checkbox" value="">
+      	</td>
+         <td>Eligibility Q2 PTE Reporting.csv</td>
+         <td>06/29/2016, 3:09 PM</td>
+         
+      </tr>
+      
+      <tr>
+      	<td>
+      		<input type="checkbox" value="">
+      	</td>
+         <td>New Hires FTW Q2 Checklist.csv</td>
+         <td>06/29/2016, 3:09 PM</td>
+         
+      </tr>
+      
+      <tr>
+      	<td>
+      		<input type="checkbox" value="">
+      	</td>
+         <td>Eligibility Q2 PTE Reporting.csv</td>
+         <td>06/29/2016, 3:09 PM</td>
+         
+      </tr> -->
+      
+      <tr ng-repeat="fileAvlDownload in filesAvlDownload  | orderBy:sortType:sortReverse">
+      	<td>
+      		<input type="checkbox" ng-model="fileAvlDownload.selected" value="{{fileAvlDownload.id}}">
+      	</td>
+         <td>{{fileAvlDownload.fileName}}</td>
+         <td>{{fileAvlDownload.dateUploaded}}</td>
+         
+      </tr>
+   </tbody>
+   
+</table>
+	
+	 					</div>
+	 				</div>
+	 			
+	 			</div><!--end of fileAvailDownload//-->
+	 		
+	 			
+	 			
+	 			
+	 		</div>
+	 	</div>
+	 </section>
+	
+	 	
