@@ -33,6 +33,7 @@
 				menu.searchMenuItemsResult = response;
 				if(response.length===0){
 					menu.noSearchResult = true;
+					menu.showSearchBox=false;
 				}else{
 					menu.noSearchResult = false;
 					menu.showSearchBox=true;
