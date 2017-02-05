@@ -10,7 +10,7 @@
 	function NarrowItDownController(MenuSearchService) {
 		var menu = this;
 		menu.searchTerm = "";
-
+		menu.showSearchBox = false;
 		var promise = MenuSearchService.getMatchedMenuItems(menu.searchTerm);
 
 		promise.then(function(response) {
@@ -21,7 +21,11 @@
 
 		menu.searchMenuItems = function() {
 			//console.log("searchItem = ", menu.searchTerm);
-			var promise = MenuSearchService.getMatchedMenuItems(menu.searchTerm);
+			if(menu.searchTerm===""){
+				menu.noSearchResult = true;
+				menu.showSearchBox=false;
+			}else{
+				var promise = MenuSearchService.getMatchedMenuItems(menu.searchTerm);
 
 			promise.then(function(response) {
 				//console.log("response search menu",response);
@@ -31,10 +35,14 @@
 					menu.noSearchResult = true;
 				}else{
 					menu.noSearchResult = false;
+					menu.showSearchBox=true;
 				}
 			}).catch(function(error) {
 				console.log("Something went terribly wrong.");
 			});
+				
+			}
+			
 
 		};
 		///
@@ -98,7 +106,8 @@
 			templateUrl:'foundItemsTemplate.html',
 			scope: {
       			items: '<',
-      			onRemove:'&'
+      			onRemove:'&',
+      			searchBox:'<'
 			},
 			controller:FoundItemsDirectiveController,
 			controllerAs: 'list',
