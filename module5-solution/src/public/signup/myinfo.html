@@ -1,0 +1,28 @@
+<div class="row" ng-show="{{vm.signedupalready}}">
+	<div class="col-md-6">
+		
+		<h1>Registered Information</h1>
+		<p>FirstName: {{vm.userinfo.firstName}}</p>
+		<p>LastName: {{vm.userinfo.lastName}}</p>
+		<p>Email: {{vm.userinfo.email}}</p>
+		<p>Phone Number: {{vm.userinfo.phoneNumber}}</p>
+	</div>
+	
+	<div class="col-md-6">
+		<h1>Your favourite menu item</h1>
+		
+		<img src="images/menu/{{vm.userinfo.menuItem.category_short_name}}/{{vm.userinfo.menuItem.category_short_name}}.jpg" width="200" height="200">
+		<p>Title - {{vm.userinfo.menuItem.name}}</p>
+		<p>Description - {{vm.userinfo.menuItem.description}}</p>
+		
+	</div>
+	
+</div>
+
+<div class="row" ng-show="vm.notsignedinalready">
+	<div class="col-md-12">
+		<h1>Not signed up yet!</h1>
+		<a ui-sref="public.signup">Sign up Now!</a>
+	</div>
+	
+</div>

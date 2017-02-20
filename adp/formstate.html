@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<title>formState</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+		<script src="lib/angular.min.js"></script>
+	</head>
+	<body ng-app>
+		<form name="studentForm"  novalidate>
+			<p>
+            First Name Status: <br />
+			Pristine {{studentForm.firstName.$pristine}}<br>
+			Error {{studentForm.firstName.$error}}<br>
+			Touched {{studentForm.firstName.$touched}}<br>
+			untouched {{studentForm.firstName.$untouched}}<br>
+			dirty{{studentForm.firstName.$dirty}}<br>
+			valid{{studentForm.firstName.$valid}}<br>
+			invalid{{studentForm.firstName.$invalid}}<br>
+			</p>
+			
+			<label for="firstName">First Name</label>
+			<input type="text" name="firstName" ng-model="student.firstName" ng-required="true">
+			<span ng-show="studentForm.firstName.$touched && student.firstName.$error">
+					First name is required.
+			</span>
+			
+			<label for ="lastName">Last Name</label>
+			<input name="lastName" type="text" ng-model="student.lastName" ng-required="true">
+			<span ng-show="studentForm.lastName.$touched && student.lasttName.$error">
+					First name is required.
+			</span>
+            
+			
+		</form>
+		
+	</body>
+	
+</html>
+	
+	

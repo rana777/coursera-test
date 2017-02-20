@@ -1,0 +1,95 @@
+<style type="text/css">
+	.ng-touched.ng-valid{
+		border:2px green solid;
+	}
+	.ng-touched.ng-invalid{
+		border:2px red solid;
+	}
+	
+</style>
+
+<div class="row" >
+	
+	<div class="col-md-6" style="margin-left:20px;">
+		<h2>Sign up </h2>
+		
+		<form name="signupForm" novalidate>
+  <div class="form-group">
+  	<!-- <p>
+  		First Name status
+  		Pristine : {{signupForm.firstName.$pristine}}<br>
+  		touched: {{signupForm.firstName.$touched}}<br>
+  		untouched: {{signupForm.firstName.$untouched}}<br>
+  		error:{{signupForm.firstName.$error}}<br>
+  		dirty:{{signupForm.firstName.$dirty}}<br>
+  		valid: {{signupForm.firstName.$valid}}<br>
+  		invalid: {{signupForm.firstName.$invalid}}<br>
+  		
+  	</p>
+  	<p>
+  		lets check for email:
+  		Pristine : {{signupForm.phoneNumber.$pristine}}<br>
+  		touched: {{signupForm.phoneNumber.$touched}}<br>
+  		untouched: {{signupForm.phoneNumber.$untouched}}<br>
+  		error:{{signupForm.phoneNumber.$error}}<br>
+  		dirty:{{signupForm.phoneNumber.$dirty}}<br>
+  		valid: {{signupForm.phoneNumber.$valid}}<br>
+  		invalid: {{signupForm.phoneNumber.$invalid}}<br>
+  		
+  	</p> -->
+    <label for="firstName">First Name:</label>
+    <input type="text" ng-model="signup.firstName" name="firstName"  class="form-control" id="firstName" ng-required="true">
+  
+  	<span ng-show="signupForm.firstName.$touched && signupForm.firstName.$error.required">
+  		First name is required!
+  	</span>
+  
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last Name:</label>
+    <input type="text" name="lastName" ng-model="signup.lastName" class="form-control" id="lastName" ng-required="true">
+    <span ng-show="signupForm.lastName.$touched && signupForm.lastName.$error.required">
+  		Last name is required!
+  	</span>
+  
+    
+  </div>
+    <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" name="email" ng-model="signup.email" class="form-control" id="email" ng-required="true">
+     <span ng-show="signupForm.email.$touched &&  signupForm.email.$invalid">
+  		Email is required!
+  	</span>
+  </div>
+     <div class="form-group">
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="text"  name="phoneNumber" pattern="(\d{3})-(\d{3})-(\d{4})"   ng-model="signup.phoneNumber" class="form-control" placeholder="###-###-####" id="phoneNumber" >
+     <span ng-show="signupForm.phoneNumber.$touched && signupForm.phoneNumber.$invalid">
+  		Phone Number must be in the form ###-###-####
+  	</span>
+  </div>
+  
+   <div class="form-group">
+    <label for="menuNumber">Menu Number:</label>
+    <input type="text" name="menuNumber" ng-model="signup.menuNumber" class="form-control" id="menuNumber" ng-required="true">
+    <span ng-show="signupForm.menuNumber.$touched && signupForm.menuNumber.$error.required">
+  		Menu Number is required!
+  	</span>
+  	
+  	<span ng-show="menuItemsDoNotExists">MenuItemsDoNotExists{{menuItemsDoNotExists}}EndOfMenuItemsDoNotExists
+  		No such menu number exists. 
+  	</span>
+  </div>
+
+  <button type="submit" class="btn btn-default" ng-click="submitClick()" ng-disabled="signupForm.$invalid">Submit</button>
+
+</form>
+		
+	<div style="margin-top:20px;" ng-show="saveSignUpInfo">
+		Your information has been saved.
+	</div>
+	</div>
+	<div class="col-md-6">
+		
+	</div>
+</div>
